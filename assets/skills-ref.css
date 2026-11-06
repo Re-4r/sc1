@@ -1,0 +1,17 @@
+/* Visual alignment with owner's reference math.zip; no change to question evaluation */
+:root{--ink:#242D48;--muted:#657296;--blue:#4C5D90;--line:#E4E1F1;--soft:#FAF9FC;--paper:#FFFFFF;--mint:#DCEAEE;--pale:#F1F0F8;--focus:#98B8D8}
+body{background:#F6F5FB;color:var(--ink)}.top{border-color:var(--line);background:#FFFFFF}
+.mark{background:#4C5D90}.primary,.tiny{background:#4C5D90;border-color:#4C5D90}.primary:hover{background:#41507C}
+.secondary{color:#4C5D90;border-color:#D3CFE6}.secondary:hover,.quiet:hover{background:#F0EEF7}
+.eyebrow{color:#657296}.stat span,.small,.question p,.intro p{color:var(--muted)}
+select,input,textarea{border-color:#D3CFE6}.guide{background:#F1F0F8}.guide p{color:#43527E}
+.note{background:#EDF3FA;border-color:#8C9FDB;color:#43527E}.bar{background:#E4E1F1}.bar>span{background:#8C9FDB}
+.question{border-color:var(--line)}.number{color:#4C5D90}.empty{border-color:#D3CFE6}
+#toast{background:#242D48}.shade{background:rgba(36,45,72,.42)}.dialog{box-shadow:0 25px 65px rgba(35,40,73,.16)}
+.student{background:#F8F5FC}.student .eyebrow{color:#6F93BA}.student .intro h1{color:#43527E}
+.activity{border-color:#E4E1F1;background:#fff;box-shadow:0 12px 32px rgba(35,40,73,.045)}
+.activity h2{color:#242D48}.activity-head{color:#657296}.choice{background:#EDF3FA;color:#43527E;border-color:#C9D9EB}.choice:hover{background:#DDE8F4}
+.answer-space input{background:#FAF9FC}.hint{background:#EEF5F7}.feedback{background:#F1F0F8}.feedback.good{background:#E4F1F4;color:#335B65}.feedback.try{background:#F8F0F4;color:#94497B}
+.completion strong{color:#4C5D90}.completion .primary{background:#4C5D90;border-color:#4C5D90}
+button,a{transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}button:active:not(:disabled){transform:scale(.985)}
+@media(prefers-reduced-motion:reduce){button,a{transition:none}}

@@ -1,0 +1,34 @@
+/* Token-accurate palette from supplied math.zip/assets/css/tokens.css. No gradients. */
+:root { --blue:#4C5D90; --sky:#DDE8F4; --ink:#242D48; --mute:#586BA5; --line:#E4E1F1; --soft:#FAF9FC; --white:#FFFFFF; --mint:#DCEAEE; }
+html, body:not(.projector-body), body:not(.projector-body).dark { background:#F6F5FB!important; color:#242D48!important; }
+.rail {background:#FAF9FC!important;border-left:1px solid #E4E1F1!important}
+.logo-mark, .solid, .btn.primary, .primary {background:#4C5D90!important;color:#fff!important;border-color:#4C5D90!important}
+.nav button.active {background:#E9EEF6!important;color:#242D48!important}
+.nav button:hover:not(.active) {background:#F0EEF7!important;color:#242D48!important}
+.workspace,.page-body,.shell {color:#242D48}
+.lesson-feature {background:#E9EEF6!important;border:1px solid #D3CFE6!important;color:#242D48!important}
+.lesson-feature h2,.feature-main h2 {color:#242D48!important}
+.paper,.dropbox,.timeline,.mini-calendar,.tool-strip,.tool-tile {background:#fff;border-color:#E4E1F1!important}
+.toolglyph {background:#E4E1F1!important;color:#4C5D90!important}
+.tool-link:nth-child(2) .toolglyph {background:#DCEAEE!important;color:#426E7C!important}
+.tool-link:nth-child(3) .toolglyph {background:#F0E2EB!important;color:#855E78!important}
+.tool-link:nth-child(4) .toolglyph {background:#DDE8F4!important;color:#4C5D90!important}
+button:focus-visible,a:focus-visible,input:focus-visible {outline:3px solid #8C9FDB!important;outline-offset:2px}
+.iconbutton,.softbtn,.chip {background:#fff;color:#43527E;border-color:#E4E1F1}
+.iconbutton:hover,.softbtn:hover {background:#F1F0F8!important}
+.taskitem,.notice-line{border-color:#E4E1F1!important}
+.check.checked,.mini-calendar .today {background:#4C5D90!important;color:#fff!important}
+.tag,.pill {background:#EDF3FA!important;color:#43527E!important;border-color:#C9D9EB!important}
+.projector-body{background:#F6F5FB!important;color:#242D48!important}
+.projector-view{background:#F6F5FB!important;color:#242D48!important}
+.projector-view:before {border-color:#E4E1F1!important}
+.projector-view:after {background:#EEF5F7!important}
+.projector-title,.projector-question {color:#242D48!important}
+.projector-sub,.projector-top,.projector-footer {color:#586BA5!important}
+.projector-answer {color:#335B65!important}
+.student-scene {background:#F1F0F8!important;border-color:#E4E1F1!important}
+.kid-action {background:#fff!important;border-color:#E4E1F1!important}
+.kid-action:nth-child(2) {background:#EEF5F7!important}
+.kid-action:nth-child(3) {background:#F8F0F4!important}
+/* Explicitly neutralize legacy accidental gradients */
+*[style*="linear-gradient"],*[style*="radial-gradient"]{background-image:none!important}

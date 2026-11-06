@@ -1,0 +1,91 @@
+/* MASAHA 2026 • Reference-driven refinement
+   Source of visual language: user-provided math.zip (tokens.css); no backend copied.
+   Flat cool canvas, restrained indigo / periwinkle, soft high-contrast interaction.
+*/
+:root{
+ --m-bg:#F6F5FB;--m-surface:#FFFFFF;--m-ink:#242D48;--m-text2:#43527E;
+ --m-muted:#657296;--m-primary:#4C5D90;--m-primary-hover:#41507C;
+ --m-border:#E4E1F1;--m-border2:#D3CFE6;--m-tint:#F0EEF7;
+ --m-blue:#EDF3FA;--m-rose:#F8F0F4;--m-teal:#EEF5F7;--m-lav:#F1F0F8;
+ --m-shadow:0 4px 22px rgba(35,40,73,.045);--m-ease:cubic-bezier(.22,.8,.24,1);
+ --blue:var(--m-primary);--sky:#DDE8F4;--ink:var(--m-ink);--mute:var(--m-muted);
+ --line:var(--m-border);--soft:#FAF9FC;--white:#FFFFFF;--mint:#DCEAEE;
+}
+html{background:var(--m-bg);-webkit-text-size-adjust:100%}
+body:not(.projector-body){background:var(--m-bg);color:var(--m-ink);font-size:15px;line-height:1.75}
+button,input,select,textarea{font-family:Ping,Tahoma,Arial,sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #98B8D8;outline-offset:3px}
+button,a{transition:background-color .19s var(--m-ease),border-color .19s var(--m-ease),color .19s var(--m-ease),transform .19s var(--m-ease),box-shadow .19s var(--m-ease)}
+button:active:not(:disabled){transform:scale(.985)}
+/* Desktop: quieter, brighter editorial shell */
+.rail{background:#FAF9FC;border-left:1px solid var(--m-border);padding-top:23px}
+.logo{padding-bottom:29px}.logo strong{color:var(--m-ink)}.logo small,.rail-label{color:var(--m-muted)}
+.logo-mark{background:var(--m-primary);border-radius:13px}
+.logo-mark:after{background:#D6B9CF}
+.nav button{min-height:45px;color:var(--m-text2);font-size:13px;border-radius:13px}
+.nav button.active{background:#E9EEF6;color:var(--m-ink);font-weight:700}
+.nav button:hover:not(.active){background:#F0EEF7;color:var(--m-ink)}
+.rail .profile-mini{border-color:var(--m-border)}.avatar{background:#E4E1F1;color:var(--m-primary)}
+.workspace{max-width:1490px;padding-top:26px}
+.bread,.date-line{color:var(--m-muted)}.topline{margin-bottom:30px}
+.iconbutton{background:#fff;border-color:var(--m-border);border-radius:13px;min-height:44px}
+.iconbutton:hover{background:var(--m-lav);border-color:var(--m-border2);color:var(--m-primary)}
+.welcome{margin-bottom:34px}.welcome h1{color:var(--m-ink);letter-spacing:0;font-weight:700}
+.welcome p{color:var(--m-muted);font-size:14px}.section-kicker{color:var(--m-muted)}
+.line-heading h2{font-size:18px;color:var(--m-ink)}.line-heading .sub{color:var(--m-muted)}
+.textbutton{color:var(--m-primary);font-size:13px;border-radius:8px}.textbutton:hover{background:var(--m-lav)}
+.dashboard-flow{gap:clamp(18px,2.5vw,38px)}.mainstack,.sidestack{gap:clamp(24px,2.6vw,37px)}
+/* Main lesson is prominent, but no garish gradient or bulky decorative overlays */
+.lesson-feature{background:#E9EEF6;border:1px solid #D3CFE6;border-radius:22px;min-height:266px;padding:28px 32px;box-shadow:var(--m-shadow)}
+.lesson-feature:before{border-color:rgba(140,159,219,.14);border-width:24px;left:-96px;bottom:-155px}
+.lesson-feature:after{border-color:rgba(76,93,144,.16)}
+.feature-meta,.feature-main p,.countdown small{color:#586A91}
+.pulse{background:#709C9F}
+.feature-main h2{color:#242D48}.countdown{color:#354978;letter-spacing:0}
+.solid{background:var(--m-primary);border-color:var(--m-primary);border-radius:12px;box-shadow:none}
+.solid:hover{background:var(--m-primary-hover);border-color:var(--m-primary-hover)}
+.softbtn{background:var(--m-lav);border-color:var(--m-border);color:var(--m-primary);border-radius:12px}
+.softbtn:hover{background:#E4E1F1;border-color:var(--m-border2)}
+.pill{border-color:#D3CFE6;background:#FAF9FC;color:var(--m-text2)}
+.progress-track{background:#D3CFE6}.progress-track i{background:#7A8AC0}
+.timeline{border-color:var(--m-border);gap:8px}.slot{border-radius:13px;min-height:91px}
+.slot:before{border-color:var(--m-bg);background:#CBC8DD}
+.slot.active{background:var(--m-lav)}.slot.active:before{background:#6A7FC4}
+.slot:hover{background:#F0EEF7}
+.slot small,.slot em{color:var(--m-muted)}.slot strong{color:var(--m-ink)}
+/* Tools as an open, touch-friendly row rather than huge colored blocks */
+.tool-strip{border-color:var(--m-border);gap:7px}.tool-link{border-radius:15px;min-height:104px;color:var(--m-text2);font-size:12px}
+.tool-link:hover{background:#F0EEF7;transform:translateY(-2px)}
+.toolglyph{background:#E4E1F1;color:#4C5D90;border-radius:15px;width:52px;height:52px}
+.tool-link:nth-child(2) .toolglyph{background:#DCEAEE;color:#487C88}
+.tool-link:nth-child(3) .toolglyph{background:#F0E2EB;color:#95617C}
+.tool-link:nth-child(4) .toolglyph{background:#DDE8F4;color:#597BAB}
+/* Low-noise task workflow and collapsed previews */
+.taskitem{border-bottom-color:var(--m-border);min-height:56px}.taskitem .copy b{color:var(--m-ink);font-size:14px}
+.taskitem small{color:var(--m-muted)}.check{border-color:#B9B4D3;background:#fff;border-radius:7px}
+.check.checked{background:#4C5D90;border-color:#4C5D90}.taskitem .priority{color:#94497B}
+.dropbox{background:#fff;border-color:var(--m-border);border-radius:17px;box-shadow:var(--m-shadow)}
+.drop-head{color:var(--m-ink);min-height:32px}.dropbox:focus-within{border-color:#CBC5E2}
+.muted{color:var(--m-muted)}
+.mini-calendar .today{background:var(--m-primary)}.mini-calendar .event{border-color:#B98FAE;background:#F8F0F4}
+.mini-calendar button:hover{background:#F0EEF7}.notice-line{border-color:var(--m-border)}.notice-dot{background:#8C9FDB}
+.glass-note{background:var(--m-lav);color:var(--m-text2)}
+.page-header h1,.paper h3{color:var(--m-ink)}.page-header p{color:var(--m-muted)}
+.paper{border-color:var(--m-border);border-radius:19px;box-shadow:var(--m-shadow)}
+.field label{color:var(--m-text2)}.field input,.field select,.field textarea,textarea.editor{border-color:var(--m-border2);border-radius:12px;background:#fff;color:var(--m-ink);min-height:44px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#8C9FDB;box-shadow:0 0 0 3px rgba(140,159,219,.17)}
+.notice{border-color:var(--m-border);background:var(--m-lav)}.shortcut-row{border-color:var(--m-border)}
+/* Thematic pages: soften every repeated surface rather than just change the main canvas */
+.tools-grid .tool-tile,.two-cards .paper{border-color:var(--m-border)}
+.settings-drawer{background:#fff;color:var(--m-ink)}.shade{background:rgba(36,45,72,.38)}
+/* Child and projector remain separate experiences. More lively, still gentle. */
+.student-scene{background:#F8F5FC;color:#242D48;border-color:#E4E1F1}
+.quiz-box{background:#F8F5FC}
+.projector-body{background:#F8F5FC;color:#242D48}
+.projector-view{background:#FCFAFF;color:#242D48}
+.projector-top{color:#657296}.projector-title{color:#4C5D90}
+.projector-question{color:#242D48}.projector-answer{color:#335B65}
+/* Don't allow contrast or spacing to collapse on touch layouts */
+@media(max-width:900px){.workspace{padding:18px 17px 52px}.dashboard-flow{gap:24px}.lesson-feature{padding:24px}.rail{box-shadow:-12px 0 40px rgba(36,45,72,.08)}}
+@media(max-width:600px){.welcome h1{font-size:29px}.lesson-feature{padding:21px 19px;min-height:245px;border-radius:19px}.tool-link{min-height:90px}.toolglyph{width:44px;height:44px}.workspace{padding-inline:14px}.taskitem .copy b{white-space:normal}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
